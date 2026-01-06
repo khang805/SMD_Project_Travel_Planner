@@ -5,8 +5,6 @@ experience for creating trip itineraries, managing budgets, and storing memories
 
 It features robust offline capabilities, real-time data synchronization, and interactive mapping.
 
-> **Note:** This project was developed as part of the **SMD (Software Methodologies and Design)** curriculum.
-
 ---
 
 ## ✨ Core Features
@@ -29,8 +27,6 @@ This project is built on a foundation of modern Android architecture and industr
 
 ### Architecture
 The app adheres to **MVVM (Model-View-ViewModel)** principles for a clean separation of concerns, ensuring the UI code is distinct from the business logic and data handling.
-
-
 
 * **Language:** 100% **Kotlin**, leveraging features like Coroutines for asynchronous operations.
 * **UI Declaration:** XML Layouts with **ViewBinding** for type-safe, high-performance access to views.
@@ -63,8 +59,7 @@ Follow these instructions to set up the project locally for development and test
 
 **1. Clone the Repository**
 ```bash
-git clone [https://github.com/your-username/Android-Travel-Planner.git](https://github.com/your-username/Android-Travel-Planner.git)
-cd Android-Travel-Planner
+git clone [https://github.com/khang805/SMD_Project_Travel-Planner.git]
 
 2. Set Up Firebase:
 
