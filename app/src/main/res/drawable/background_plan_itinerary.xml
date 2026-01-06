@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- Using a very subtle light gray for the background of the cards.
+         This is often referred to as 'Whisper Gray' or 'Off-White' in design. -->
+    <solid android:color="#F0EAEA"/>
+
+    <!-- Applying rounded corners (16dp is a good, noticeable radius) -->
+    <corners android:radius="16dp"/>
+</shape>

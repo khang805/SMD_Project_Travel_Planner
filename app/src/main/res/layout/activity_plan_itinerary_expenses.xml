@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/main"
+    android:background="@android:color/white">
+
+    <!-- Top Image View -->
+    <ImageView
+        android:id="@+id/onboardingImage"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:contentDescription="Scenic travel destination image"
+        android:scaleType="centerCrop"
+        android:src="@drawable/plan_itinerary_img" />
+
+    <!-- Content Section --><LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1.2"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:paddingStart="32dp"
+    android:paddingEnd="32dp"
+    android:paddingTop="30dp">
+
+    <!-- Page Indicator Dots --><LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:layout_marginBottom="30dp">
+
+    <View
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:background="@drawable/dot_inactive"
+        android:layout_marginEnd="8dp" />
+
+    <View
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:background="@drawable/dot_active"
+        android:layout_marginEnd="8dp" />
+
+    <View
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:background="@drawable/dot_inactive" />
+</LinearLayout>
+
+    <!-- Main Title --><TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Plan your itinerary and\nexpenses"
+    android:textColor="@android:color/black"
+    android:textSize="24sp"
+    android:textStyle="bold"
+    android:gravity="center_horizontal"
+    android:layout_marginBottom="12dp" />
+
+    <!-- Description Text --><TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Organize your trip details and track your spending effortlessly"
+    android:textColor="@android:color/darker_gray"
+    android:textSize="16sp"
+    android:textStyle="bold"
+    android:gravity="center_horizontal"
+    android:lineSpacingExtra="4dp"
+    android:layout_marginBottom="30dp" />
+
+    <!-- Tokyo, Japan Card --><LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/background_plan_itinerary"
+    android:padding="16dp"
+    android:gravity="center_vertical"
+    android:layout_marginBottom="16dp">
+
+    <ImageView
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/map_logo_plan_iternary_img"
+        app:tint="@color/black"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="Location icon" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tokyo, Japan"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5 days, 4 nights"
+            android:textStyle="bold"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="14sp" />
+    </LinearLayout>
+</LinearLayout>
+
+    <!-- Budget Card --><LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/background_plan_itinerary"
+    android:padding="16dp"
+    android:gravity="center_vertical"
+    android:layout_marginBottom="40dp">
+
+    <ImageView
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/expenses_logo_plan_itinerary_img"
+        app:tint="@color/black"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="Budget icon" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Budget: $1000"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Expenses tracked: $400"
+            android:textStyle="bold"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="14sp" />
+    </LinearLayout>
+</LinearLayout>
+
+    <!-- Next Button --><Button
+    android:id="@+id/btnNext"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:text="Next"
+    android:textColor="@android:color/white"
+    android:textSize="18sp"
+    android:background="@drawable/form_input2"
+    android:textAllCaps="false" />
+
+</LinearLayout>
+
+</LinearLayout>

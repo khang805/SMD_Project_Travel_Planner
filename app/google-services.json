@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "347736467624",
+    "project_id": "smdproject-ab3fd",
+    "storage_bucket": "smdproject-ab3fd.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:347736467624:android:453d1e2bb6cb0e0beafa9d",
+        "android_client_info": {
+          "package_name": "com.example.smd_project_travel_planner"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmwcKlyBiuaAHqhsMNud9aQd6jjvzDjIk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

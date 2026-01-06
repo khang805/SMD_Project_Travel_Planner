@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <!-- Top Header Section (New Trip Title and Close Button) -->
+    <RelativeLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="30dp">
+
+        <ImageView
+            android:id="@+id/closeIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/close_icon"
+            app:tint="@android:color/black"
+            android:contentDescription="Close"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Trip"
+            android:textColor="@android:color/black"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    <!-- Scrollable Content (Input Fields and Add Photo) -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/headerLayout"
+        android:layout_above="@+id/bottomContainer"
+        android:fillViewport="true"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp">
+
+            <!-- Trip Title Input - Uses background_plan_itinerary for light gray/rounded style -->
+            <EditText
+                android:id="@+id/etTripTitle"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:hint="Trip Title"
+                android:textColorHint="@color/white"
+                android:paddingStart="25dp"
+                android:paddingEnd="20dp"
+                android:background="@drawable/background_plan_itinerary"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Destination Input - Uses background_plan_itinerary -->
+            <EditText
+                android:id="@+id/etDestination"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:hint="Destination"
+                android:textColorHint="@color/white"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:background="@drawable/background_plan_itinerary"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Start Date and End Date (Side by Side) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="24dp">
+
+                <!-- Start Date Input - Uses background_plan_itinerary -->
+                <EditText
+                    android:id="@+id/etStartDate"
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:layout_weight="1"
+                    android:hint="Start Date"
+                    android:textColorHint="@color/white"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:background="@drawable/background_plan_itinerary"
+                    android:layout_marginEnd="8dp" />
+
+                <!-- End Date Input - Uses background_plan_itinerary -->
+                <EditText
+                    android:id="@+id/etEndDate"
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:layout_weight="1"
+                    android:hint="End Date"
+                    android:textColorHint="@color/white"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:background="@drawable/background_plan_itinerary"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+
+            <!-- Add Photo Button - Uses background_plan_itinerary, needs corrected text/icon/tint -->
+            <Button
+                android:id="@+id/btnAddPhoto"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:text=" Add Photo"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:background="@drawable/background_plan_itinerary"
+                android:textAllCaps="false" />
+
+            <!-- Padding View to ensure scrolling for long content -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="100dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <!-- Bottom Container (Create Trip Button and Navigation) -->
+    <LinearLayout
+        android:id="@+id/bottomContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:paddingTop="12dp"
+        android:background="@android:color/white">
+
+        <!-- Create Trip Button - Corrected to use form_input2 for the blue color -->
+        <Button
+            android:id="@+id/btnCreateTrip"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Create Trip"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"
+            android:background="@drawable/form_input2"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="16dp"
+            android:textAllCaps="false" />
+
+        <!-- Full Bottom Navigation Bar (Incorporating all 5 items from partial_bottom_nav.xml) -->
+        <LinearLayout
+            android:id="@+id/bottomNav"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal"
+            android:paddingTop="8dp"
+            android:background="@android:color/white"
+            android:gravity="center">
+
+            <!-- 1. Trips (Active) -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/trips"
+                    app:tint="@color/black"
+                    android:contentDescription="Trips" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Trips"
+                    android:textSize="10sp"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <!-- 2. Planner (Inactive) -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/planner"
+                    app:tint="@color/black"
+                    android:contentDescription="Planner" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Planner"
+                    android:textSize="10sp"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <!-- 3. Expenses (Inactive) -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/expenses"
+                    app:tint="@color/black"
+                    android:contentDescription="Expenses" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Expenses"
+                    android:textSize="10sp"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <!-- 4. Maps (Inactive) -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/maps"
+                    app:tint="@color/black"
+                    android:contentDescription="Maps" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Maps"
+                    android:textSize="10sp"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <!-- 5. Notifications (Inactive) -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/notifications"
+                    app:tint="@color/black"
+                    android:contentDescription="Notifications" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Notifications"
+                    android:textSize="10sp"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

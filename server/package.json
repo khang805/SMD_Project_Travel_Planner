@@ -1,0 +1,12 @@
+{
+  "name": "travel-planner-notifications",
+  "version": "1.0.0",
+  "description": "FCM v1 Notification Server",
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^11.11.0"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}
