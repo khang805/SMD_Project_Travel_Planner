@@ -57,7 +57,7 @@ Follow these instructions to set up the project locally for development and test
 
 ### Installation & Setup
 
-**1. Clone the Repository**
+1. Clone the Repository
 ```bash
 git clone [https://github.com/khang805/SMD_Project_Travel-Planner.git]
 
